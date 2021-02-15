@@ -23,7 +23,7 @@ namespace Lab2Console
 
             //Loopar 20 random shapes som läggs till i listan
             for (var i = 0; i < 20; i++)
-                //Här väljer man vilken metod man vill använda vilket just nu skickar in en centerposition
+                //Lägger till den slumpade shapen i listan med slumpade värden beroendes på vilken metod, i det här fallet med inmatad center position
                 shapegen.Add(Shape.GenerateShape(new Vector3(3.0f, 3.0f, 4.0f)));
 
             //Kollar varje loop för Triangel eller om det är en Shape3D
@@ -53,7 +53,8 @@ namespace Lab2Console
             Console.WriteLine($"\nTotal circumference of triangles: {triangelCircumferenceSum:0.0}");
             Console.WriteLine($"Average area of all shapes: {totalArea / 20:0.0}");
             Console.WriteLine(
-                $"The Shape3D with the largest volume is {myshape}\nwith the volume of: {myshape.Volume:0.0}");
+                $"The 3D Shape with the largest volume is {myshape}\nwith the volume of: {myshape.Volume:0.0}");
+            Console.ReadKey();
         }
     }
 }
